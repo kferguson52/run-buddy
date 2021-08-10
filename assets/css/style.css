@@ -187,3 +187,14 @@ footer a {
         padding: 10px 20px;
         font-size: 16px;
     }
+.contact {
+    text-align: center;
+    background: #024e76;
+    }
+.contact h2{
+    color:#fce138;
+}
+.contact-info iframe {
+    width: 400px;
+    height: 400px;
+}
