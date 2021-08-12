@@ -18,6 +18,15 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  top: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
 }
 
 header h1 {
@@ -89,11 +98,12 @@ section {
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  background-attachment: fixed;
 }
 
 .hero-cta {
@@ -113,11 +123,13 @@ section {
 
 .hero-form {
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgb(252, 225, 56);
   padding: 20px;
   color: #024e76;
   width: 40%;
   margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -147,6 +159,7 @@ section {
   background-color: #024e76;
   border: none;
   padding: 10px 20px;
+  border-radius: 15px;
   font-size: 16px;
 } 
 /* HERO STYLES END */
@@ -194,11 +207,15 @@ section {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #39a6b2;
+}
+
+.step:last-child {
+  border-bottom: none;
 }
 
 .step h3 {
@@ -324,6 +341,7 @@ section {
   border: 1px solid #024e76;
   display: block;
   padding: 7px 15px;
+  border-radius: 10px;
   font-size: 16px;
   color: #024e76;
   width: 100%;
@@ -333,6 +351,7 @@ section {
 
 .contact-form button {
   width: 100%;
+  border-radius: 10px;
   border: none;
   background: #fce138;
   color: #024e76;
@@ -361,11 +380,34 @@ section {
   display: flex;
 }
 
+/* update existing rule with this declaration */
+.form-input {
+  background-color: rgba(255,255,255, 0.75);
+}
+
+/* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
+
+.contact-form input, .contact-form textarea {
+  background-color: #819aec;
+}
+
+/* create a new css rule for focus state */
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: #c7cfe9;
+  outline: none;
+
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
